@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+*{
+    font-family: "Merriweather Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*(padding y margen se incluyen en los totales)*/
+    -webkit-user-select: none; /* Compatibilidad safari*/
+    user-select: none; /* No se puede seleccionar el texto, respeta hipervinculos*/
+}
+
+p {
+    line-height: 1.5; /* Aumento interlineado párrafos */
+    text-align: justify;
+    padding: 0 1rem;
+}
+h1 {
+    color: #1E90FF;
+    font-size: 3rem; 
+    text-align: center;
+    padding: 1rem;
+}
+h2 {
+    color: #1E90FF;
+    font-size: 2rem; 
+    text-align: left;
+    padding: .8rem;
+}
+
+/* ESTILOS HEADERS */
+header {
+    background-color: #4CAF50;
+    position: sticky; /* Fijo el encabezado */
+    top: 0; /* Posiciono desde arriba */
+    z-index: 1; /* Para posicioname encima + (positivo)*/
+    padding: 1.5rem;
+    display: flex;
+
+    align-items: center; /* Eje Transversdal => Centro vertical */
+    justify-content: space-between; /* Separo con el mayor espacio entre los contenedores (ancla y naveg)*/
+    a {
+        color: #1405E7;
+        text-decoration: none;
+        display: flex;
+        flex-direction: column; /* Alineo elementos verticalmente */
+        align-items: center;
+        img {
+            width: 15vh; /* Ajusto el logo porcentaje ancho view port */
+            height: auto; /* Mantengo proporción imagen */
+        }
+        h1 {
+            color: #1E90FF;
+            font-size: 1rem;
+            text-align: center;
+            padding: .25rem;
+        }
+        h2 {
+            color: #FF0000;
+            font-size: .75rem;
+            text-align: center;
+            padding: 0;
+        }
+    }
+    ul {
+        list-style: none; /* Quito marcadores */
+        display: flex; /* Alineo elementos lista horizontalmente */
+        flex-wrap: wrap; /* Permito que los elementos lista se envuelvan */
+        width: 100%; /* Aseguro lista ocupe todo ancho disponible */
+        li {
+            padding-left: 1rem; /* Separo lista*/
+            font-size: 1.3rem;
+        }
+    }
+}    
+
+/* ESTILOS MAIN INDEX*/
+main {
+    background-color: #FFFFFF;
+    color: #000000;
+    /*flex: 1; /* Permito que el main ocupe el espacio disponible (lo coloque por la pagina de carrito que el main al no ocupar todo el footer queda arriba y se ve blanco debajo del mismo) */
+    p {
+        padding-top: 0.5rem;
+        text-indent: 2em; /* Ajusta cantidad de sangría */
+    }
+    h2 {
+        font-size: 1.5rem;
+        padding-top: 2.5rem;
+    }
+    ol {
+        margin-left: 1rem;
+        padding-left: 1rem; /* Alinea numeración lista con resto contenido  Main*/
+        padding-bottom: 1rem;
+    }
+    .prodNaturales {
+        background-image: url(../assets/img/FondoMAM.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: 100vh;
+        padding: 1rem;
+    }
+    /* Estilos sección principal Main .index */
+    .contenedorTextSeccionMainIndex {
+        width: 50%; /* ocupo el 50% del ancho de la pantalla */
+        padding: 2rem;
+        border: 5px groove #000000;
+        border-radius: 25px; /* redondeo el área */
+        margin: 0 auto;/* Doy margen sup e inf 0 y der e izq auto (lo centra) */
+        margin-top: 2rem ; /* Lo separo del h2 */
+        text-align: center; /* Alineo el texto del link */
+        -webkit-backdrop-filter: blur(10px); /* Soporte para Safari */
+        backdrop-filter: blur(10px); /* desenfoque del área del contenedor */
+        p {
+            font-size: 1.8em;
+        }
+        a {
+            display:inline-block;
+            margin-top:30px; /* Aire desde párrafo de arriba */
+            text-decoration: none;
+            color: #FF0000;
+            font-size: 2.5em;
+            font-weight: bold;
+            border:4px groove #000000;
+            padding:1rem;
+            border-radius:10px;
+            background-color: #8d8989; 
+            box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5); /* Desenfoques en px  sombra negra y brillo .05 */
+        }
+    }
+    /* Estilos sección principal Main .index #valores */
+    .GridPrincipiosValores {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Tres columnas iguales */
+        grid-template-rows: repeat(3, auto);/* Tres filas automáticas */
+        grid-template-areas:
+        "val1 val5 val3"
+        "val2 val5 val4"
+        "val6 val6 val6";
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        margin: 0 1rem;
+      
+        .val1 {
+            grid-area: val1;
+        }
+        .val2 {
+            grid-area: val2;
+        }
+        .val3 {
+            grid-area: val3;
+        }
+        .val4 {
+            grid-area: val4;
+        }
+        .val5 {
+            grid-area: val5;
+            img{
+                border-radius: 3rem;
+                width: 100%;
+            }
+        }
+        .val6 {
+            grid-area: val6;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+        .val1, .val2, .val3, .val4, .val6 {
+            background-color: #757575;
+            color: #FFFFFF;
+            border-radius: 2rem;
+            padding-bottom: 16px;
+            h3 {
+                padding-top: 16px;
+                padding-left: 16px;
+            }
+            p {
+                padding-top: 16px;
+            }
+        }
+    }
+}
+.vison {
+    display: flex;
+    align-items: center; /* Eje secundario*/
+    img {
+        border-radius: 2rem;
+        width: 75vh;
+        margin-left: 1rem;
+    }
+    p {
+        font-size: 1.5rem;
+    }
+}
+
+.mision {
+    display: flex;
+    align-items: center; /* Eje secundario*/
+    p {
+        font-size: 1.5rem;
+    }
+    img {
+        border-radius: 2rem;
+        width: 75vh;
+        margin-right: 1rem;
+    }
+}
+
+
+/* PAGINA PRODUCTOS.html */
+.productos {
+    div h3 {
+        color:#FFFFFF;
+        text-align: center;
+        margin-top: .8rem;
+    }
+    div p {
+        color:#FFFFFF;
+        text-indent: 0; /* Elimino lo grl */
+        padding: 0; /* Elimino lo grl */
+        margin-top: .8rem;
+    }
+    div a {
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+    display: flex; /* Activar Flexbox */
+    flex-direction: row;
+    flex-wrap: wrap; /* Permito productos pasen siguiente línea */
+    /*justify-content: space-between; /* Distribuir los productos con espacio entre ellos (Eje principal) */
+    align-items: stretch; /* Estiro para ocupar todo el espcio vertical */
+    padding: 1.5rem;
+    .producto {
+        background-color: #2196F3;
+        padding: 1rem; /* Relleno interno cada producto */
+        border-radius: 1.4rem;
+        flex: 1 1 200px; /* Ajuste flexible: crece, encoge, tamaño base 200px */
+        margin: 1rem; /* Margen externo cada producto */
+        box-sizing: border-box; /* Incluyo relleno y borde en tamaño total */
+        display: flex; /* Activar Flexbox en cada producto */
+        flex-direction: column; /* Apilar elementos verticalmente */
+        justify-content: space-between; /* Distribuyo elementos verticalmente */
+        img{
+            max-width: 75%; /* La imagen no excederá el tamaño del contenedor en % */
+            height: auto; /* Mantengo proporciones img*/
+            border-radius: 1rem;
+            margin: 0 auto; /* Centro imagen horizontalmente (al activar antes en producto el flex direction column) */
+        }
+        a {
+            text-align: right;
+            margin-top: .8rem;
+        }
+    }
+}
+video {
+    max-width: 100%;
+    border-radius: 45px;
+}
+track {
+    color: #fc0505;
+    font-size: 1.5em;
+    font-family: sans-serif;
+}
+
+/* ETILOS FOOTERS */
+footer {
+    background-color: #2196F3;
+    color: #FFFFFF; /* Texto blanco */
+    padding: 1.5rem;
+    bottom: 0; /*Lo posiciono desde abajo*/
+    display: flex;
+    flex-direction: column; /* Organizo hijos en columna*/
+    align-items: center; /* Centro elementos horizontalmente */
+    justify-content: space-between; /* Añado espacio entre los elementos para alinear la imagen a la derecha */
+    a{
+        display: flex;
+        align-items: center; /* Centra verticalmente */
+        img{
+            width: 15vh; /* Ajusto logo a porcentaje ancho view port*/
+            height: auto; /* Mantengo proporción imagen */
+        }
+    }
+    ul{
+        list-style: none;
+        a{
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+    }
+    .pie{
+        display: flex;
+        align-items: center;
+        justify-content: space-between; /* Distribuyo contenido en todo el espacio horizontal */
+        width: 100%; /* Aseguro ocupar todo el ancho de la pantalla con el contenedor*/
+        box-sizing: border-box; /* Incluyo padding y border en tamaño total */
+        .seguinos{
+            display: flex;
+            flex-direction:column;
+            ul{
+                display: flex;
+                gap: 1rem; /* Espacio entre íconos */
+            }
+            h3{
+                margin-bottom: 1rem; /* Opcional: Ajustar según sea necesario */
+            }
+        }
+        .legales{
+            display: flex;
+            flex-direction:column;
+            ul{
+                text-indent: 5em; /* Ajusta cantidad de sangría */
+            }
+        }
+    }
+    .whatsapp {  
+        img {
+            width: 2rem;
+            height: 2rem;
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+        }
+    }
+    .irarriba{
+        color: #FFFFFF;
+        font-size: 1rem;
+        background-color: #2196F3;
+        padding: .5rem;
+        width: 2rem;
+        border-radius: 25%;
+        position: fixed;
+        bottom: 4rem;
+        right: 1.5rem;
+        display: flex; /* Centro contenido*/
+        align-items: center; /* Centra el contenido verticalmente */
+        justify-content: center; /* Centra el contenido horizontalmente */
+    }
+    .facebook {
+        color: blue;
+        img {
+            width: 1.8rem;
+            height: 1.8rem;
+            background-color: #FFFFFF;
+            border-radius: 50%; /* Hacer el fondo circular */
+            padding: .1rem; /* Añadir un poco de espacio alrededor del icono */
+            box-sizing: border-box; /* Incluyo padding en tamaño total */
+        }
+    }
+    .x {
+        color: black; /* Defino color del texto */
+        img {
+            width: 1.8rem;
+            height: 1.8rem;
+            background-color: #FFFFFF;
+            border-radius: 50%; /* Hacer fondo circular */
+            padding: .1rem; /* Añado un poco de espacio alrededor del icono */
+            box-sizing: border-box; /* Incluyo padding en tamaño total */
+        }
+    }
+    .instagram {
+        img {
+            width: 1.8rem; /* Defino ancho del logo */
+            height: 1.8rem; /* Defino altura del logo */
+            background-color: #FFFFFF; /* Fondo blanco */
+            border-radius: 50%; /* Redondeo fondo para adaptarlo a logos circulares */
+            padding: .1rem; /* Añado un poco de espacio alrededor del icono */
+            box-sizing: border-box; /* Incluyo padding en tamaño total */
+        }
+    }
+    .linkedin {
+        img {
+            width: 30px;
+            height: 30px;
+            background-color: #FFFFFF;
+            border-radius: 50%; /* Hago fondo circular */
+            padding: 1px; /* Añado un poco de espacio alrededor del icono */
+        }
+    }
+    address{
+        font-size: .8rem;
+        margin-top: 1rem;
+        a{
+            text-decoration: none; /* Elimina subrayado */
+            color: inherit; /* Mantengo color enlace igual texto circundante */
+        }
+    }
+    .copyright{
+        text-align: center;
+        margin-top: .8rem;
+        font-size: .7rem;
+    }
+}
