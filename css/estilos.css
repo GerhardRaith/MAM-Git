@@ -7,7 +7,6 @@
     -webkit-user-select: none; /* Compatibilidad safari*/
     user-select: none; /* No se puede seleccionar el texto, respeta hipervinculos*/
 }
-
 p {
     line-height: 1.5; /* Aumento interlineado párrafos */
     text-align: justify;
@@ -34,7 +33,6 @@ header {
     z-index: 1; /* Para posicioname encima + (positivo)*/
     padding: 1.5rem;
     display: flex;
-
     align-items: center; /* Eje Transversdal => Centro vertical */
     justify-content: space-between; /* Separo con el mayor espacio entre los contenedores (ancla y naveg)*/
     a {
@@ -76,7 +74,6 @@ header {
 main {
     background-color: #FFFFFF;
     color: #000000;
-    /*flex: 1; /* Permito que el main ocupe el espacio disponible (lo coloque por la pagina de carrito que el main al no ocupar todo el footer queda arriba y se ve blanco debajo del mismo) */
     p {
         padding-top: 0.5rem;
         text-indent: 2em; /* Ajusta cantidad de sangría */
@@ -205,7 +202,6 @@ main {
     }
 }
 
-
 /* PAGINA PRODUCTOS.html */
 .productos {
     div h3 {
@@ -224,7 +220,7 @@ main {
         text-decoration: none;
     }
     display: flex; /* Activar Flexbox */
-    flex-direction: row;
+    flex-direction: row; /*Ya es x defecto */
     flex-wrap: wrap; /* Permito productos pasen siguiente línea */
     /*justify-content: space-between; /* Distribuir los productos con espacio entre ellos (Eje principal) */
     align-items: stretch; /* Estiro para ocupar todo el espcio vertical */
@@ -250,15 +246,90 @@ main {
             margin-top: .8rem;
         }
     }
+    video {
+        max-width: 100%;
+        border-radius: 45px;
+    }
+    track {
+        color: #fc0505;
+        font-size: 1.5em;
+        font-family: sans-serif;
+    }
 }
-video {
-    max-width: 100%;
-    border-radius: 45px;
+
+/* PAGINA CONTACTO.html */
+main {
+    h3 {
+        text-align: left;
+        margin-left: 1rem;
+    }
+    form {
+        margin-left: 2rem;
+        div {
+            margin-top: 1rem;
+        }
+    }
+    .MapaTransporte {
+        display: flex;
+        justify-content: center;
+        .mapa {
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            margin-bottom: 2rem;
+            iframe {
+                border-radius: 45px;
+            }
+            p {
+                text-indent: 0;
+            }
+        }
+        .transporte {
+            display:flex;
+            flex-direction: column;
+            justify-content:flex-start;
+            h3 {
+                padding: 1rem;
+                background-color: #000000;
+                color: #FFFFFF;
+                border-radius: 1rem;
+            }
+            p {
+                padding: 1rem;
+                font-size: 16px;
+            }
+            
+        }
+    }
 }
-track {
-    color: #fc0505;
-    font-size: 1.5em;
-    font-family: sans-serif;
+
+/* PAGINA CARRITO.html */
+main {
+    table {
+        margin-left: 20px; /* Ajusto distancia desde izquierda */
+    border-collapse: separate; /* Para aplicar el spacing */
+    border-spacing: 0 10px; /* Ajusto el interlineado entre filas */
+    thead {
+        th {
+            background-color: #000000; /* Color fondo p/ encabezado */
+            color: #FFFFFF;
+        }
+
+    }
+    th, td {
+        padding: 10px 20px; /* Ajusto padding p/ encabezados y celdas */
+        text-align: left; /* Alineo texto izquierda */      
+    }
+    tfoot {
+        td {
+            font-weight: bold; /* Resalto  total */
+            background-color: #000000;
+            color:#FFFFFF;
+        }
+    }
+    }
 }
 
 /* ETILOS FOOTERS */

@@ -37,7 +37,7 @@
         <main>
             <h1>Contacto:</h1>
             <h2>Formulario:</h2>
-            <h3>Complete el formulario:</h3>
+            <h3>Complete lo siguiente:</h3>
             <form action="https://formspree.io/f/movqqepl" method="post">
                 <div>
                     <label for="nombre">Nombre:
@@ -106,7 +106,7 @@
                         title="Debe contener al menos una letra mayúscula, una letra minúscula, un número no correlativo y un carácter especial. Mínimo 8 y máximo 16 caracteres."
                         maxlength="16" 
                         aria-required="true">
-                    </label>  Lo comento porque Formspree te bloquea por recopilar datos de claves-->
+                    </label>  Lo comento porque Formspree te bloquea por recopilar datos de claves, estaba probando campos, para luego dividir este formulario en la creación de un usuario y el de contacto-->
                 </div>
 
                 <div>
@@ -160,40 +160,42 @@
                     <input type="submit" value="Enviar Formulario">
                 </div>
             </form>
-            <section>
-                <h2 id="direccion">¿Dónde estamos?</h2>
-                <iframe id="myIframe" title="Dónde Estamos" width="600" height="450" allowfullscreen=""></iframe> 
-                <script>
-                    function isCompatibleBrowser() {
-                        var ua = navigator.userAgent;
-                        var isFirefox = ua.indexOf("Firefox") > -1;
-                        var isSafari = ua.indexOf("Safari") > -1 && ua.indexOf("Chrome") === -1;
-                        var firefoxVersion = parseInt(ua.split("Firefox/")[1]);
-                        var safariVersion = parseInt(ua.split("Version/")[1]);
-                        return (isFirefox && firefoxVersion >= 121) || (isSafari && safariVersion >= 16.4);
-                    }
-                    document.addEventListener("DOMContentLoaded", function() {
-                        var iframe = document.getElementById("myIframe");
-                        if (isCompatibleBrowser()) {
-                            iframe.setAttribute("loading", "lazy");
-                            iframe.setAttribute("referrerpolicy", "no-referrer-when-downgrade");
-                        } else {
-                            iframe.src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1952.344173251527!2d-58.42943573681405!3d-34.61835922058464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca5b27a80ca9%3A0x17ec04de04bb4ee3!2sVenezuela%204455%2C%20C1211ABI%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1727381334279!5m2!1ses-419!2sar";
+            <div class="MapaTransporte">
+                <section class="mapa">
+                    <h2 id="direccion">¿Dónde estamos?</h2>
+                    <iframe title="Dónde Estamos" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.447826759435!2d-58.43040142454794!3d-34.6181217729492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca5b270f7a0b%3A0x4e7925d6d9c3614c!2sVenezuela%204451%2C%20C1211%20ABI%2C%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1730731301686!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
+                    <!--<script>
+                        function isCompatibleBrowser() {
+                            var ua = navigator.userAgent;
+                            var isFirefox = ua.indexOf("Firefox") > -1;
+                            var isSafari = ua.indexOf("Safari") > -1 && ua.indexOf("Chrome") === -1;
+                            var firefoxVersion = parseInt(ua.split("Firefox/")[1]);
+                            var safariVersion = parseInt(ua.split("Version/")[1]);
+                            return (isFirefox && firefoxVersion >= 121) || (isSafari && safariVersion >= 16.4);
                         }
-                    });
-                </script>
-                <p>&#x231B; <strong>Horario de Atención:</strong> de lunes a viernes de <strong>08:00</strong> a <strong>20:00</strong> hs (de corrido) y sábados de <strong>09:00</strong> a <strong>13:00 hs</strong></p>
-            </section>
-
-            <section>
-                <h2>Trasporte Público:</h2>
-                <h3>Colectivos:</h3>
-                <p>2 5 8 15 26 65 84 85 103 119 132 181</p>
-                <h3>Subte:</h3>
-                <p>Línea A estación "Río de Janeiro <i>(lo deja a 4 cuadras)</i></p>
-                <h3>Tren:</h3>
-                <p> Línea SARMIENTO estación "Caballito" <i>(lo deja a 12 cuadras) </i></p>
-            </section>
+                        document.addEventListener("DOMContentLoaded", function() {
+                            var iframe = document.getElementById("myIframe");
+                            if (isCompatibleBrowser()) {
+                                iframe.setAttribute("loading", "lazy");
+                                iframe.setAttribute("referrerpolicy", "no-referrer-when-downgrade");
+                            } else {
+                                iframe.src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1952.344173251527!2d-58.42943573681405!3d-34.61835922058464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca5b27a80ca9%3A0x17ec04de04bb4ee3!2sVenezuela%204455%2C%20C1211ABI%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1727381334279!5m2!1ses-419!2sar";
+                            }
+                        });
+                    </script> Prueba que te da el navegador para solucionar problemas de compatibilidad ANDA!-->
+                    <p>&#x231B; <strong>Horario de Atención:</strong> de lunes a viernes de <strong>08:00</strong> a <strong>20:00</strong> hs (de corrido) y sábados de <strong>09:00</strong> a <strong>13:00 hs</strong></p>
+                </section>
+                <section class="transporte">
+                    <h2>Trasporte Público:</h2>
+                    <h3>Colectivos:</h3>
+                    <p>2 5 8 15 26 65 84 85 103 119 132 181</p>
+                    <h3>Subte:</h3>
+                    <p>Línea <strong>A</strong> estación "<strong>Río de Janeiro</strong>" <i>(lo deja a 4 cuadras)</i></p>
+                    <h3>Tren:</h3>
+                    <p> Línea SARMIENTO estación "<strong>Caballito</strong>" <i>(lo deja a 12 cuadras) </i></p>
+                </section>
+            </div>
+            
         </main>
 
         <script>
