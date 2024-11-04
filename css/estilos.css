@@ -33,8 +33,8 @@ header {
     z-index: 1; /* Para posicioname encima + (positivo)*/
     padding: 1.5rem;
     display: flex;
-    align-items: center; /* Eje Transversdal => Centro vertical */
     justify-content: space-between; /* Separo con el mayor espacio entre los contenedores (ancla y naveg)*/
+    align-items: center; /* Eje Transversdal => Centro vertical */
     a {
         color: #1405E7;
         text-decoration: none;
@@ -42,7 +42,7 @@ header {
         flex-direction: column; /* Alineo elementos verticalmente */
         align-items: center;
         img {
-            width: 15vh; /* Ajusto el logo porcentaje ancho view port */
+            width: 15vh; /* Ajusto logo porcentaje ancho view port */
             height: auto; /* Mantengo proporción imagen */
         }
         h1 {
@@ -123,7 +123,32 @@ main {
             box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5); /* Desenfoques en px  sombra negra y brillo .05 */
         }
     }
-    /* Estilos sección principal Main .index #valores */
+    /* Estilos Nosotros */
+    .nosotros{
+        display: grid;
+        grid-template-columns: 35% 30% 35%;
+        grid-template-rows: repeat(2, auto); /* 2 filas automáticas */
+        grid-template-areas: 
+        "n1 ni n2"
+        "n3 ni n4";
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        margin: 0 1rem;
+        .ni {grid-area: ni;}
+        .n1 {grid-area: n1;}
+        .n2 {grid-area: n2;}
+        .n3 {grid-area: n3;}
+        .n4 {grid-area: n4;}
+        img{
+            border-radius: 3rem;
+            width: 100%;
+        }
+        p {
+            font-size: 1.2rem;
+        }
+    }
+    /* Estilos Principios y Valores */
     .GridPrincipiosValores {
         display: grid;
         grid-template-columns: repeat(3, 1fr); /* Tres columnas iguales */
@@ -136,28 +161,17 @@ main {
         justify-content: center;
         align-items: center;
         margin: 0 1rem;
-      
-        .val1 {
-            grid-area: val1;
-        }
-        .val2 {
-            grid-area: val2;
-        }
-        .val3 {
-            grid-area: val3;
-        }
-        .val4 {
-            grid-area: val4;
-        }
-        .val5 {
-            grid-area: val5;
+        .val1 {grid-area: val1;}
+        .val2 {grid-area: val2;}
+        .val3 {grid-area: val3;}
+        .val4 {grid-area: val4;}
+        .val5 {grid-area: val5;
             img{
                 border-radius: 3rem;
                 width: 100%;
             }
         }
-        .val6 {
-            grid-area: val6;
+        .val6 {grid-area: val6;
             margin: 0 auto;
             margin-bottom: 20px;
         }
@@ -176,7 +190,7 @@ main {
         }
     }
 }
-.vison {
+.vision {
     display: flex;
     align-items: center; /* Eje secundario*/
     img {
@@ -188,7 +202,6 @@ main {
         font-size: 1.5rem;
     }
 }
-
 .mision {
     display: flex;
     align-items: center; /* Eje secundario*/
@@ -246,14 +259,23 @@ main {
             margin-top: .8rem;
         }
     }
-    video {
-        max-width: 100%;
-        border-radius: 45px;
-    }
-    track {
-        color: #fc0505;
-        font-size: 1.5em;
-        font-family: sans-serif;
+}
+video {
+    max-width: 100%;
+    border-radius: 45px;
+}
+track {
+    color: #fc0505;
+    font-size: 1.5em;
+    font-family: sans-serif;
+}
+.logros {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{ 
+        border-radius: 2rem;
+        margin-bottom: 2rem;
     }
 }
 
@@ -299,8 +321,7 @@ main {
             p {
                 padding: 1rem;
                 font-size: 16px;
-            }
-            
+            } 
         }
     }
 }
