@@ -25,6 +25,43 @@ h2 {
     padding: .8rem;
 }
 
+/* Estilos p/ pantallas pequeñas (smartphones) */ 
+@media (max-width: 600px) { 
+    header { 
+        flex-direction: column; /* Cambia a disposición vertical */ 
+        align-items: flex-start; /* Alineo al inicio */
+        ul { 
+            flex-direction: column;
+            li { 
+                padding-bottom: 5px; /* Espacio entre los elementos lista */ 
+            } 
+        }
+    }
+    main {
+        .prodNaturales {
+             h1 {
+                font-size: 1.5rem;
+                padding: 0;
+            }
+            h2 {
+                font-size: 1.2rem;
+                padding: .5rem;
+            }
+            .contenedorTextSeccionMainIndex {
+                width: 75%; /* Ocupo el 75% del ancho de la pantalla */
+                padding: 1rem;
+                p {
+                    font-size: 1.5rem;
+                }
+                a {
+                    font-size: 1.5rem;
+                    padding: .5rem;
+                }
+            }
+        }  
+    }
+}  
+
 /* ESTILOS HEADERS */
 header {
     background-color: #4CAF50;
@@ -42,7 +79,7 @@ header {
         flex-direction: column; /* Alineo elementos verticalmente */
         align-items: center;
         img {
-            width: 15vh; /* Ajusto logo porcentaje ancho view port */
+            width: 25%; /* Ajusto logo porcentaje*/
             height: auto; /* Mantengo proporción imagen */
         }
         h1 {
@@ -87,6 +124,7 @@ main {
         padding-left: 1rem; /* Alinea numeración lista con resto contenido  Main*/
         padding-bottom: 1rem;
     }
+    /* Estilos 1era sección Main (imagen de fondo) */
     .prodNaturales {
         background-image: url(../assets/img/FondoMAM.png);
         background-size: cover;
@@ -94,8 +132,8 @@ main {
         background-position: center center;
         height: 100vh;
         padding: 1rem;
+        
     }
-    /* Estilos sección principal Main .index */
     .contenedorTextSeccionMainIndex {
         width: 50%; /* ocupo el 50% del ancho de la pantalla */
         padding: 2rem;
@@ -107,14 +145,14 @@ main {
         -webkit-backdrop-filter: blur(10px); /* Soporte para Safari */
         backdrop-filter: blur(10px); /* desenfoque del área del contenedor */
         p {
-            font-size: 1.8em;
+            font-size: 2rem;
         }
         a {
             display:inline-block;
             margin-top:30px; /* Aire desde párrafo de arriba */
             text-decoration: none;
             color: #FF0000;
-            font-size: 2.5em;
+            font-size: 2.5rem;
             font-weight: bold;
             border:4px groove #000000;
             padding:1rem;
@@ -189,29 +227,34 @@ main {
             }
         }
     }
-}
-.vision {
-    display: flex;
-    align-items: center; /* Eje secundario*/
-    img {
-        border-radius: 2rem;
-        width: 75vh;
-        margin-left: 1rem;
+    .vision {
+        display: flex;
+        flex-wrap:initial; /* Permito elementos se envuelvan y eviten el desbordamiento */
+        align-items: center; /* Eje secundario*/
+        
+        margin: 0 1rem;
+        img {
+            border-radius: 2rem;
+            width: 100%; /* Ajusto ancho imagen al 100% del contenedor padre */ 
+            max-width: 50%; /* Mantengo el límite máximo del ancho */
+        }
+        p {
+            font-size: 1.5rem;
+        }
     }
-    p {
-        font-size: 1.5rem;
-    }
-}
-.mision {
-    display: flex;
-    align-items: center; /* Eje secundario*/
-    p {
-        font-size: 1.5rem;
-    }
-    img {
-        border-radius: 2rem;
-        width: 75vh;
-        margin-right: 1rem;
+    .mision {
+        display: flex;
+        flex-wrap:initial; /* Permito elementos se envuelvan y eviten el desbordamiento */
+        align-items: center; /* Eje secundario*/
+        margin: 0 1rem;
+        p {
+            font-size: 1.5rem;
+        }
+        img {
+            border-radius: 2rem;
+            width: 100%; /* Ajusto ancho imagen al 100% del contenedor padre */ 
+            max-width: 50%; /* Mantengo el límite máximo del ancho */
+        }
     }
 }
 
