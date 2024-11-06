@@ -235,14 +235,14 @@ main {
     display: flex; /* Activar Flexbox */
     flex-direction: row; /*Ya es x defecto */
     flex-wrap: wrap; /* Permito productos pasen siguiente línea */
-    /*justify-content: space-between; /* Distribuir los productos con espacio entre ellos (Eje principal) */
+    justify-content: space-between; /* Distribuir los productos con espacio entre ellos (Eje principal) */
     align-items: stretch; /* Estiro para ocupar todo el espcio vertical */
     padding: 1.5rem;
     .producto {
         background-color: #2196F3;
         padding: 1rem; /* Relleno interno cada producto */
         border-radius: 1.4rem;
-        flex: 1 1 200px; /* Ajuste flexible: crece, encoge, tamaño base 200px */
+        flex: 1 1 300px; /* Ajuste flexible: crece, encoge, tamaño base 300px */
         margin: 1rem; /* Margen externo cada producto */
         box-sizing: border-box; /* Incluyo relleno y borde en tamaño total */
         display: flex; /* Activar Flexbox en cada producto */
@@ -302,8 +302,9 @@ main {
             width: 50%;
             margin-bottom: 2rem;
             iframe {
-                border-radius: 45px;
-            }
+                border-radius: 3rem;
+                border: none;
+          }
             p {
                 text-indent: 0;
             }
@@ -323,6 +324,28 @@ main {
                 font-size: 16px;
             } 
         }
+    }
+/* Estilos grl. p/botones: Borrar Enviar - Formulario*/
+    input[type="reset"], input[type="submit"] {
+        background-color: #4CAF50; /* Color fondo */
+        border: none; /* Sin borde */
+        color: white; /* Color texto */
+        padding: 15px 32px; /* Espaciado interno */
+        text-align: center; /* Alineación texto */
+        font-weight: bold;
+        display: inline-block; /* Mostrar en línea */
+        font-size: 16px; /* Tamaño fuente */
+        margin: 4px 16px; /* Márgenes */
+        cursor: pointer; /* Cursor puntero al pasar sobre el botón */
+        border-radius: 12px; /* Redondeo bordes */
+    }
+/* Estilos adicionales p/ hover y focus */
+    input[type="reset"]:hover, input[type="submit"]:hover {
+        background-color: #E77408; /* Color fondo al pasar el cursor */
+    }
+    input[type="reset"]:focus, input[type="submit"]:focus {
+        outline: none; /* Quito contorno por defecto al enfocarse */
+        box-shadow: 0 0 20px #E20202; /* Añado sombra al enfocarse */
     }
 }
 
