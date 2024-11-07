@@ -1,44 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-<url>
-  <loc>https://effulgent-belekoy-d83565.netlify.app/</loc>
-  <lastmod>2024-10-09T18:38:18+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://effulgent-belekoy-d83565.netlify.app/pages/productos</loc>
-  <lastmod>2024-10-09T18:38:18+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://effulgent-belekoy-d83565.netlify.app/pages/contacto</loc>
-  <lastmod>2024-10-09T18:38:18+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://effulgent-belekoy-d83565.netlify.app/pages/carrito</loc>
-  <lastmod>2024-10-09T18:38:18+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://effulgent-belekoy-d83565.netlify.app/pages/politicas</loc>
-  <lastmod>2024-16-09T18:38:18+00:00</lastmod>
-  <priority>0.50</priority>
-</url>
-<url>
-  <loc>https://effulgent-belekoy-d83565.netlify.app/pages/terminos</loc>
-  <lastmod>2024-16-09T18:38:18+00:00</lastmod>
-  <priority>0.50</priority>
-</url>
-<url>
-  <loc>https://effulgent-belekoy-d83565.netlify.app/pages/cookies</loc>
-  <lastmod>2024-16-09T18:38:18+00:00</lastmod>
-  <priority>0.50</priority>
-</url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!--  created with Free Online Sitemap Generator www.xml-sitemaps.com  -->
+<!-- 
+always: para páginas que cambian cada vez que se acceden, como las que muestran contenido dinámico.
+hourly: para páginas que se actualizan varias veces al día.
+daily: adecuado para páginas con actualizaciones diarias, como blogs o noticias.
+weekly: para páginas que cambian semanalmente, como secciones de noticias o blogs con publicaciones semanales.
+monthly: para páginas que se actualizan mensualmente, como informes mensuales.
+yearly: para páginas con cambios anuales, como informes anuales o eventos periódicos.
+never: para páginas estáticas que rara vez, o nunca, cambian.-->
+<!-- Agregar más URLs aquí: -->
+  <url>
+    <loc>https://gerhardraith.github.io/MAM-Git/</loc>
+    <lastmod>2024-11-06T19:28:07+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://gerhardraith.github.io/MAM-Git/index.html</loc>
+    <lastmod>2024-11-06T19:28:07+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://gerhardraith.github.io/MAM-Git/pages/productos.html</loc>
+    <lastmod>2024-11-06T19:28:07+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://gerhardraith.github.io/MAM-Git/pages/contacto.html</loc>
+    <lastmod>2024-11-06T19:28:07+00:00</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://gerhardraith.github.io/MAM-Git/pages/carrito.html</loc>
+    <lastmod>2024-11-06T19:28:07+00:00</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://gerhardraith.github.io/MAM-Git/pages/politicas.html</loc>
+    <lastmod>2024-11-06T19:28:07+00:00</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.50</priority>
+  </url>
+  <url>
+    <loc>https://gerhardraith.github.io/MAM-Git/pages/terminos.html</loc>
+    <lastmod>2024-11-06T19:28:07+00:00</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.50</priority>
+  </url>
+  <url>
+    <loc>https://gerhardraith.github.io/MAM-Git/pages/cookies.html</loc>
+    <lastmod>2024-11-06T19:28:07+00:00</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.50</priority>
+  </url>
 </urlset>

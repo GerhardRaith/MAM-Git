@@ -26,14 +26,14 @@ El proyecto está estructurado en las siguientes carpetas dentro de la carpeta P
   - `estilos.css`: Archivo principal de estilos.
 - `js/`: Contiene los archivos de scripts JavaScript.
   - `scripts.js`: Archivo principal de scripts.
-- `assets/img/`: Contiene las imágenes utilizadas en la página.
+- `assets/img/`: Contiene las imágenes utilizadas en la página (y algunas no utilizadas que es para adecuar el proyecto).
 - `assets/audio/`: Contiene los audios utilizadas en la página.
 - `assets/video/`: Contiene los videos utilizadas en la página.
 - `assets/fonts/`: Es para practicar utilizar las fuentes descargadas en vez de las del link google.
 - `pages/`: Contiene las paginas del proyecto dependientes de index.html
   - `carrito.html`: Es el prototipo del carrito.
   - `productos.html`: Es el prototipo de los productos o servicios.
-  - `contacto.html`: Es el prototipo del formulario de contacto (posee muchos campos que son a los efectos de probar su funcionamiento y no son realmente para contacto, ej:clve, edad, etc.)
+  - `contacto.html`: Es el prototipo del formulario de contacto (posee muchos campos que son a los efectos de probar su funcionamiento y no son realmente para contacto, ej:clve, edad, etc.) Avanzando el proyecto, estimo se deberían convertir en un formulario de contcto y en un formulario de usuario, para que sea funcional con el carrito.
     - `cokiees.html`: Es referente a lo legal un modelo sencillo generado por IA para recordar colocar uno
     - `politicas.html`: Es el prototipo de las políticas de privacidad del sitio ídem anterior.
     - `terminos.html`: Es el prototipo de los términos y condiciones del sitio ídem anterior.
@@ -41,8 +41,9 @@ El proyecto está estructurado en las siguientes carpetas dentro de la carpeta P
 ## Navegación:
 
 Para visualizar la web como se vería en tu navegador preferido accede a alguno de los siguientes link's:
-https://effulgent-belekoy-d83565.netlify.app/
-https://gerhardraith.github.io/ProyectoMAM/
+https://effulgent-belekoy-d83565.netlify.app/ (mantengo actualizado y hay pequeñas variaciones con respecto a Git en el despliegue, no entiendo porqué!)
+https://gerhardraith.github.io/ProyectoMAM/  (1era versión)
+https://gerhardraith.github.io/MAM-Git/  (con actualizaciones de ramas 07/11/2024)
 
 ## Instalación:
 
@@ -52,6 +53,10 @@ Para instalar y ejecutar el proyecto en tu máquina local, sigue estos pasos:
     ```sh
     git clone https://github.com/GerhardRaith/ProyectoMAM.git (agregado 22/10/24)
     ```
+    ```sh
+    git clone https://github.com/GerhardRaith/MAM-Git.git (agregado 07/11/24)
+    ```
+
 2. Navega al directorio del proyecto:
     ```sh
     cd asociacion-mutual-alberto-magno
@@ -60,7 +65,7 @@ Para instalar y ejecutar el proyecto en tu máquina local, sigue estos pasos:
 
 ## Uso:
 
-Explora las diferentes secciones de la página para obtener información sobre los servicios y beneficios ofrecidos por la asociación. Utiliza el formulario de contacto para ponerte en contacto con nosotros.
+Explora las diferentes secciones de la página para obtener información sobre los servicios y beneficios ofrecidos por la Asociación MAM de los PdlS. Utiliza el formulario de contacto para ponerte en contacto con nosotros.
 
 ## Contribuciones:
 

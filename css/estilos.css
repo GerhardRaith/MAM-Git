@@ -38,6 +38,7 @@ h2 {
         }
     }
     main {
+        /* Adapto Estilos p/ no desbordar el fondo de pantalla con el tecto y el botón "Productos Naturales" */
         .prodNaturales {
              h1 {
                 font-size: 1.5rem;
