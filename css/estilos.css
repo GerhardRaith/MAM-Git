@@ -25,44 +25,6 @@ h2 {
     padding: .8rem;
 }
 
-/* Estilos p/ pantallas pequeñas (smartphones) */ 
-@media (max-width: 600px) { 
-    header { 
-        flex-direction: column; /* Cambia a disposición vertical */ 
-        align-items: flex-start; /* Alineo al inicio */
-        ul { 
-            flex-direction: column;
-            li { 
-                padding-bottom: 5px; /* Espacio entre los elementos lista */ 
-            } 
-        }
-    }
-    main {
-        /* Adapto Estilos p/ no desbordar el fondo de pantalla con el tecto y el botón "Productos Naturales" */
-        .prodNaturales {
-             h1 {
-                font-size: 1.5rem;
-                padding: 0;
-            }
-            h2 {
-                font-size: 1.2rem;
-                padding: .5rem;
-            }
-            .contenedorTextSeccionMainIndex {
-                width: 75%; /* Ocupo el 75% del ancho de la pantalla */
-                padding: 1rem;
-                p {
-                    font-size: 1.5rem;
-                }
-                a {
-                    font-size: 1.5rem;
-                    padding: .5rem;
-                }
-            }
-        }  
-    }
-}  
-
 /* ESTILOS HEADERS */
 header {
     background-color: #4CAF50;
@@ -107,6 +69,32 @@ header {
         }
     }
 }    
+/* Estilos p/ pantallas pequeñas HEADER & MAIN PRINCIPAL */ 
+@media (max-width: 768px) { 
+    header { 
+        flex-direction: column; /* Cambia a disposición vertical */ 
+        align-items: flex-start; /* Alineo al inicio */
+        padding: .5rem;
+        a {
+            img {
+                width: 10%; /* Reduce logo */
+            }
+            h1 {
+                font-size: 0.8rem; /* Reduce h1 logo */
+            }
+            h2 {
+                font-size: 0.6rem; /* Reduce h2 logo */
+            }
+        }
+        ul { 
+            flex-direction: column;
+            li { 
+                padding-bottom: 5px; /* Espacio entre los elementos lista */
+                font-size: .8rem; /* Reduce tamaño las li */ 
+            } 
+        }
+    }
+}
 
 /* ESTILOS MAIN INDEX*/
 main {
@@ -165,7 +153,7 @@ main {
     /* Estilos Nosotros */
     .nosotros{
         display: grid;
-        grid-template-columns: 35% 30% 35%;
+        grid-template-columns: .35fr .30fr .35fr; /* 35% 30% 35%; repeat(3, 1fr)*/
         grid-template-rows: repeat(2, auto); /* 2 filas automáticas */
         grid-template-areas: 
         "n1 ni n2"
@@ -230,7 +218,7 @@ main {
     }
     .vision {
         display: flex;
-        flex-wrap:initial; /* Permito elementos se envuelvan y eviten el desbordamiento */
+        flex-wrap: initial; /* Permito elementos se envuelvan y eviten el desbordamiento */
         align-items: center; /* Eje secundario*/
         
         margin: 0 1rem;
@@ -255,6 +243,77 @@ main {
             border-radius: 2rem;
             width: 100%; /* Ajusto ancho imagen al 100% del contenedor padre */ 
             max-width: 50%; /* Mantengo el límite máximo del ancho */
+        }
+    }
+}
+/* Estilos p/ pantallas pequeñas MAIN INDEX */ 
+@media (max-width: 768px) {
+    main {
+        /* Adapto Estilos p/ no desbordar el fondo de pantalla con el tecto y el botón "Productos Naturales" */
+        .prodNaturales {
+            h1 {
+               font-size: 1.5rem;
+               padding: 0;
+           }
+           h2 {
+               font-size: 1.2rem;
+               padding: .5rem;
+           }
+           .contenedorTextSeccionMainIndex {
+               width: 75%; /* Ocupo el 75% del ancho de la pantalla */
+               padding: 1rem;
+               p {
+                   font-size: 1.5rem;
+               }
+               a {
+                   font-size: 1.5rem;
+                   padding: .5rem;
+               }
+           }
+       }
+        .nosotros {
+            p {
+                font-size: .9rem;
+            }
+            img {
+                border-radius: .5rem;
+            }
+        }
+        .vision {
+            p {
+                font-size: 1rem;
+            }
+            img {
+                border-radius: .8rem;
+            }
+        }
+        .mision {
+            p {
+                font-size: 1rem;
+            }
+            img {
+                border-radius: .8rem;
+            }
+        }
+        .GridPrincipiosValores {
+            .val1, .val2, .val3, .val4, .val6 {
+                border-radius: .8rem;
+                padding-bottom: 8px;
+                h3 {
+                    font-size: .9rem;
+                    padding-top: 8px;
+                    padding-left: 8px;
+                }
+                p {
+                    font-size: .8rem;
+                    padding-top: 8px;
+                }
+            }
+            .val5 {
+                img{
+                    border-radius: .7rem;
+                }
+            }
         }
     }
 }
@@ -393,7 +452,7 @@ main {
     }
 }
 
-/* PAGINA CARRITO.html */
+/* PAGINA CARRITO.html (es la única tabla x eso estilo así*/
 main {
     table {
         margin-left: 20px; /* Ajusto distancia desde izquierda */
@@ -546,5 +605,16 @@ footer {
         text-align: center;
         margin-top: .8rem;
         font-size: .7rem;
+    }
+}
+/* Estilos p/ pantallas pequeñas FOOTER */ 
+@media (max-width: 768px) {
+    footer {
+        padding: .5rem;
+        a {
+            img {
+                width: 8vh; /* Ajusto logo a porcentaje ancho view port*/
+            }
+        }
     }
 }
