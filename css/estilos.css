@@ -384,14 +384,24 @@ track {
 
 /* PAGINA CONTACTO.html */
 main {
+    
     h3 {
         text-align: left;
         margin-left: 1rem;
     }
     form {
-        margin-left: 2rem;
+        display: flex;
+        flex-wrap: wrap; /*Permito envolver eleemntos en varias lineas */
+        flex-direction: column;
+        justify-content: flex-start; /* principal (vertical) */
+        align-items: flex-start; /* secundario (horizontal) */
+        margin-left: 12rem;
+        box-sizing: border-box; /* Incluyo padding y border en ancho total */
         div {
             margin-top: 1rem;
+            h4 {
+                margin-bottom: 1rem;
+            }
         }
     }
     .MapaTransporte {
