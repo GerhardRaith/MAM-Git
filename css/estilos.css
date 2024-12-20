@@ -31,7 +31,7 @@ header {
     position: sticky; /* Fijo el encabezado */
     top: 0; /* Posiciono desde arriba */
     z-index: 1; /* Para posicioname encima + (positivo)*/
-    padding: 1.5rem;
+    padding: .7rem;
     display: flex;
     justify-content: space-between; /* Separo con el mayor espacio entre los contenedores (ancla y naveg)*/
     align-items: center; /* Eje Transversdal => Centro vertical */
@@ -391,7 +391,7 @@ main {
     }
     form {
         display: flex;
-        flex-wrap: wrap; /*Permito envolver eleemntos en varias lineas */
+        flex-wrap: wrap; /*Permito envolver elementos en varias lineas */
         flex-direction: column;
         justify-content: flex-start; /* principal (vertical) */
         align-items: flex-start; /* secundario (horizontal) */

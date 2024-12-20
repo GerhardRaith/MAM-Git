@@ -8,7 +8,9 @@
         <script src="https://kit.fontawesome.com/8d93caaefa.js" crossorigin="anonymous"></script>
         <meta http-equiv="Cache-Control" content="public, max-age=120"> <!-- Lo agregué  x adv inspecion http-cache -->
         <meta http-equiv="Expires" content="120">
-        <script src="../js/script.js" defer></script><!-- Enlace archivo JavaScript carpeta 'js', con defer para que se cargue después del HTML -->
+        <script src="../js/script.js" defer></script><!--(NO LO UTILIZO) Enlace archivo JavaScript carpeta 'js', con defer para que se cargue después del HTML -->
+        <script src="../js/validacionForm.js" defer></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="../css/estilos.css">
     </head>
     <body>
@@ -38,36 +40,41 @@
             <h1>Contacto:</h1>
             <h2>Formulario:</h2>
             <h3>Complete lo siguiente:</h3>
-            <form action="https://formspree.io/f/movqqepl" method="post">
+            <form action="" method="post" id="contactoFormulario"> <!--https://formspree.io/f/movqqepl-->
                 <div>
                     <label for="nombre">Nombre:
-                        <input type="text" placeholder="Ingrese su/s Nombre/s completo/s" required name="nombre" id="nombre" minlength="3" maxlength="20">
+                        <input type="text" placeholder="Ingrese su/s Nombre/s completo/s" required name="nombre" id="nombre" minlength="2" maxlength="20">
+                        <small class="text-danger d-none" id="errorNombre">Corrija el nombre.</small>
                     </label>
                 </div>
                 <div>
-                    <label for="apellido">Apellido:
-                        <input type="text" placeholder="Ingrese su/s Apellido/s completo/s" required name="apellido" id="apellido" minlength="3" maxlength="20">
-                    </label>
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" placeholder="Ingrese su/s Apellido/s completo/s" required name="apellido" id="apellido" minlength="2" maxlength="20">
+                    <small class="text-danger d-none" id="errorApellido">Corrija el apellido.</small>
                 </div>
                 <div>
                     <label for="dni">DNI:
                         <input type="number" placeholder="Ingrese su Nº de documento" required name="dni" id="dni" minlength="7" maxlength="8">
+                        <small class="text-danger d-none" id="errorDNI">Corregir el DNI</small>
                     </label>
                 </div>
                 <div>
                     <label for="edad">Edad:
-                        <input type="range" placeholder="Selecione su Edad" required name="edad" id="edad" min="18" max="100" oninput="mostrarValor(this.value)">
+                        <input type="range" placeholder="Selecione su Edad" required name="edad" id="edad" min="16" max="100" oninput="mostrarValor(this.value)">
+                        <small class="text-danger d-none" id="errorEdad">Debe ser mayor de 18 años para registrarse.</small>
                         <span id="valorEdad">50</span>
                     </label>
                 </div>
                 <div>
                     <label for="telefono">Teléfono:
                         <input type="tel" name="telefono" id="telefono" required placeholder="Ingrese su Nº de teléfono antepondiendo el código de área">
+                        <small class="text-danger d-none" id="errorTelefono">Corregir su Nº de teléfono (Sin guiones).</small>
                     </label>
                 </div>
                 <div>
                     <label for="email">e-mail:
                         <input type="email" placeholder="Ingrese su correo electrónico de contacto" required name="email" id="email">
+                        <small class="text-danger d-none" id="errorEmail">Corregir correo electrónico.</small>
                     </label>
                 </div>
                 <div>
@@ -146,6 +153,7 @@
                 <div>
                     <label for="mensaje">Escriba su mensaje:</label>
                     <textarea name="mensaje" id="mensaje" rows="5" cols="50" maxlength="250" placeholder="Ingrese hasta un máximo 250 caracteres"></textarea>
+                    <small class="text-danger d-none" id="errorMensaje">Reformule su mensaje.</small>
                 </div>
 
                 <div>
@@ -163,8 +171,8 @@
             <div class="MapaTransporte">
                 <section class="mapa">
                     <h2 id="direccion">¿Dónde estamos?</h2>
-                    <iframe title="Dónde Estamos" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.447826759435!2d-58.43040142454794!3d-34.6181217729492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca5b270f7a0b%3A0x4e7925d6d9c3614c!2sVenezuela%204451%2C%20C1211%20ABI%2C%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1730731301686!5m2!1ses-419!2sar" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
-                    <!--<script>
+                    <iframe title="Dónde Estamos" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.447826759435!2d-58.43040142454794!3d-34.6181217729492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca5b270f7a0b%3A0x4e7925d6d9c3614c!2sVenezuela%204451%2C%20C1211%20ABI%2C%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1730731301686!5m2!1ses-419!2sar" width="600" height="450" allowfullscreen=""></iframe> <!--loading="lazy" referrerpolicy="no-referrer-when-downgrade"--> 
+                    <script>
                         function isCompatibleBrowser() {
                             var ua = navigator.userAgent;
                             var isFirefox = ua.indexOf("Firefox") > -1;
@@ -182,7 +190,7 @@
                                 iframe.src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1952.344173251527!2d-58.42943573681405!3d-34.61835922058464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca5b27a80ca9%3A0x17ec04de04bb4ee3!2sVenezuela%204455%2C%20C1211ABI%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1727381334279!5m2!1ses-419!2sar";
                             }
                         });
-                    </script> Prueba que te da el navegador para solucionar problemas de compatibilidad ANDA!-->
+                    </script> <!--Prueba que te da el navegador para solucionar problemas de compatibilidad ANDA!-->
                     <p>&#x231B; <strong>Horario de Atención:</strong> de lunes a viernes de <strong>08:00</strong> a <strong>20:00</strong> hs (de corrido) y sábados de <strong>09:00</strong> a <strong>13:00 hs</strong></p>
                 </section>
                 <section class="transporte">

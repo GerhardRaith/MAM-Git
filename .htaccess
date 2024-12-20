@@ -31,3 +31,7 @@ Header set Strict-Transport-Security: "max-age=31536000; includeSubDomains"
 
 # Deshabilito el listado de directorios: Evita que los usuarios puedan ver el contenido de los directorios.
 Options -Indexes
+
+<IfModule mod_headers.c>
+  Header set Access-Control-Allow-Origin "https://apis.google.com"
+</IfModule>

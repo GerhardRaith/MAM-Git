@@ -1,0 +1,8 @@
+[build]
+    publish = "https://effulgent-belekoy-d83565.netlify.app/" # Asegurar que este path apunte a la carpeta que contiene tu proyecto
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "https://apis.google.com"
+    Access-Control-Allow-Origin = "https://kit.fontawesome.com"

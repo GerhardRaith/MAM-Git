@@ -11,6 +11,17 @@ La página web está diseñada para proporcionar información sobre los servicio
 - **Responsive Design**: La página se adapta a diferentes tamaños de pantalla, garantizando una experiencia de usuario óptima en dispositivos móviles, tabletas y escritorios.
 - **HTML5 y CSS3**: Utiliza las últimas tecnologías para asegurar una estructura y estilos modernos.
 - **Interactividad**: Implementación de JavaScript para mejorar la experiencia del usuario.
+- **Entrega Final**: se agregó el archivo validacionForm.js, en el valido Nombre, Apellido, DNI, edad, teléfono, e-mail y mensaje. Se quita y deja comentado el envío de formulario a https://formspree.io/f/movqqepl para probar las validaciones sin interferencia del envío.
+Se consume una API (ZeroBounce) para validar el e-mal y de esa forma evitar datos inservibles en el formulario
+Se habilita el java script interno en el html para cargar el mapa y que la “carga” y el “referrerpolicy” sea compatible con más navegadores.
+El script eterno se coloca en el head con el atributo defer, para no colocarlo debajo del html.
+•	Nombre y Apellido: se mantiene las validaciones de html; se agrega en java script expresiones regulares para que el contenido sean solo letras y espacios y además se agrega expresiones regulares para contenido de vocales y consonantes, haciendo una lógica que al menos tanto para el nombre como para el apellido se forme con una consonante y una vocal.
+•	DNI: se agrega al java script una expresión regular para que solo contenga números. Y se repite la validación de html para que tenga entre 7 y 8 números sin puntos.
+•	Edad: se corrige el html para poder colocar una edad de 16 años para probar la lógica de exigir una edad mínima de 18 en java script.
+•	Teléfono: valido con expresión regular para que tenga entre 10 y 13 dígitos y que pueda incorporar el código de país de argentina solamente. 
+•	e-mail: validación con expresión regular y consumiendo una API de ZeroBounce, para garantizar que sea un e-mail de dominio existente.
+•	Mensaje: validación con expresión regular, para que contenga al menos 4 palabras. 
+
 
 ## Estructura del Proyecto:
 
